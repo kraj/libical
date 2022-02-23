@@ -28,16 +28,16 @@
 # NOTE: If Berkeley DB ever gets a Pkg-config ".pc" file, add pkg_check_modules() here
 
 # Checks if environment paths are empty, set them if they aren't
-if(NOT "$ENV{BERKELEYDB_ROOT}" STREQUAL "")
-	set(_BERKELEYDB_PATHS "$ENV{BERKELEYDB_ROOT}")
-elseif(NOT "$ENV{Berkeleydb_ROOT}" STREQUAL "")
-	set(_BERKELEYDB_PATHS "$ENV{Berkeleydb_ROOT}")
-elseif(NOT "$ENV{BERKELEYDBROOT}" STREQUAL "")
-	set(_BERKELEYDB_PATHS "$ENV{BERKELEYDBROOT}")
-else()
-	# Set just in case, as it's used regardless if it's empty or not
+#if(NOT "$ENV{BERKELEYDB_ROOT}" STREQUAL "")
+# set(_BERKELEYDB_PATHS "$ENV{BERKELEYDB_ROOT}")
+#elseif(NOT "$ENV{Berkeleydb_ROOT}" STREQUAL "")
+#	set(_BERKELEYDB_PATHS "$ENV{Berkeleydb_ROOT}")
+#elseif(NOT "$ENV{BERKELEYDBROOT}" STREQUAL "")
+#	set(_BERKELEYDB_PATHS "$ENV{BERKELEYDBROOT}")
+#else()
+#	# Set just in case, as it's used regardless if it's empty or not
 	set(_BERKELEYDB_PATHS "")
-endif()
+#endif()
 
 # Allow user to pass a path instead of guessing
 if(BerkeleyDB_ROOT_DIR)

@@ -141,8 +141,8 @@ CONFIGURE() {
   cd $BDIR
   rm -rf *
   #lots of work needed to eliminate uninit vars
-  #cmake --warn-uninitialized -Werror=dev .. $2 || exit 1
-  cmake .. $2 || exit 1
+  cmake --warn-uninitialized -Werror=dev .. $2 || exit 1
+  #cmake .. $2 || exit 1
 }
 
 #function CLEAN:
